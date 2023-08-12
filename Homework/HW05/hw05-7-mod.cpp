@@ -11,13 +11,25 @@
             1989
 
     Output:
-        February has 28 days
-
-    Test case:
-        Year(s) :
-            2000
-
-    Output:
-        February has 29 days
-
 */
+    
+#include <stdio.h>
+
+int main() {
+    int year;
+
+    printf("Year(s) : ");
+    scanf("%d", &year);
+
+    if (year % 4 != 0) {
+        printf("February has 28 days\n");
+    } else if (year % 100 != 0) {
+        printf("February has 29 days\n");
+    } else if (year % 400 != 0) {
+        printf("February has 28 days\n");
+    } else {
+        printf("February has 29 days\n");
+    }
+
+    return 0;
+}
